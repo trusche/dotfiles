@@ -1,0 +1,25 @@
+[user]
+	name = Thilo Rusche
+	email = thilorusche@gmail.com
+[core]
+	editor = vim
+	excludesfile = /Users/trusche/.gitignore
+[color]
+	ui = true
+[push]
+	default = current
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset - %Cgreen(%ci)%Creset %s %C(bold blue)<%an>%Creset %C(yellow)%d%Creset'  --abbrev-commit --date=iso
+        co = checkout
+	cp = cherry-pick
+        p = pull --rebase
+	b = branch
+	m = merge --ff-only
+	s = status
+	r = rebase -i
+	rc = rebase --continue
+        sum = log --pretty=format:'%Cred%h %C(blue)<%an> %C(white)%s' --abbrev-commit
+[github]
+	user = trusche
+[credential]
+	helper = osxkeychain
