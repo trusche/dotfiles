@@ -23,3 +23,5 @@
 	user = trusche
 [credential]
 	helper = osxkeychain
+[pull]
+	default = current

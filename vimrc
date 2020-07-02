@@ -1,68 +1,55 @@
-set guifont=Monaco:h10
-filetype on  " Automatically detect file types.
-set nocompatible  " We don't want vi compatibility.
- 
-" Add recently accessed projects menu (project plugin)
-set viminfo^=!
- 
-" Minibuffer Explorer Settings
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
- 
-" alt+n or alt+p to navigate between entries in QuickFix
-map <silent> <m-p> :cp <cr>
-map <silent> <m-n> :cn <cr>
- 
-" Change which file opens after executing :Rails command
-let g:rails_default_file='config/database.yml'
- 
-syntax enable
+set nocompatible
+set number
+syntax on
+filetype on
+filetype plugin on
+filetype indent on
 
-set encoding=utf8
-set fileencoding=utf8
-set bg=dark
+call plug#begin('~/.vim/plugged')
 
-set cf  " Enable error files & error jumping.
-set clipboard+=unnamed  " Yanks go on clipboard instead.
-set history=256  " Number of things to remember in history.
-set autowrite  " Writes on make/shell commands
-set ruler  " Ruler on
-"set nu  " Line numbers on
-"set nowrap  " Line wrapping off
-set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
-"colorscheme vividchalk  " Uncomment this to set a default theme
-colorscheme ir_black
- 
-" Formatting (some of these are for coding in C and C++)
-set ts=2  " Tabs are 2 spaces
-set bs=2  " Backspace over everything in insert mode
-set shiftwidth=2  " Tabs under smart indent
-set nocp incsearch
-"set cinoptions=:0,p0,t0
-"set cinwords=if,else,while,do,for,switch,case
-"set formatoptions=tcqr
-"set cindent
-set autoindent
-set smarttab
-set expandtab
- 
-" Visual
-set showmatch  " Show matching brackets.
-set mat=5  " Bracket blinking.
-set list
-" Show $ at end of line and trailing space as ~
-"set lcs=tab:\ \ ,eol:$,trail:~,extends:>,precedes:<
-set lcs=
-set novisualbell  " No blinking .
-set noerrorbells  " No noise.
-set laststatus=2  " Always show status line.
- 
-" gvim specific
-set mousehide  " Hide mouse after chars typed
-set mouse=a  " Mouse in all modes
+" Make sure you use single quotes
+"
+" " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+" Plug 'rafi/awesome-vim-colorschemes'
+" Plug 'francoiscabrol/ranger.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'vim-ruby/vim-ruby'
+Plug 'jacoborus/tender.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'morhetz/gruvbox'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'joshdick/onedark.vim'
+Plug 'tpope/vim-eunuch'
 
-map <D-r> :SweetVimRspecRunFile<CR> "(CMD-r) or (Apple-r)
-map <D-R> :SweetVimRspecRunFocused<CR> "(SHIFT-CMD-r)
-map <M-D-r> :SweetVimRspecRunPrevious<CR> "(OPT-CMD-r)
+" Tomorrow color scheme for ruby
+Plug 'chriskempson/base16-vim'
+"  Plug 'preservim/nerdtree'
+
+Plug 'pangloss/vim-javascript'
+
+call plug#end()
+
+set rtp+=~/.fzf
+
+" autocmd vimenter * NERDTree
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" map — :NERDTreeToggle<CR> " open/close nerdtree window
+" map <leader>r :NERDTreeFind<cr> “ this is the key to jump to the nerdtree window from any other window
+" autocmd BufWinEnter * NERDTreeFind
+" map ] :NERDTreeFind<CR> “ pressing this inside any open file in vim will jump to the nerdtree and highlight where that file is -> very useful when you have multiple files open at once
+"
+
+" Disable netrw directory banner
+let g:netrw_banner = 0
+" Open files in vertical split
+let g:netrw_browse_split = 2
+
+let g:netrw_winsize = 25
+
+
+set termguicolors
+colorscheme onedark
+" set lighline theme inside lightline config
+let g:lightline = { 'colorscheme': 'onedark' }
