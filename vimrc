@@ -5,6 +5,7 @@ filetype plugin indent on
 filetype on
 filetype indent on
 
+autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
 
@@ -17,6 +18,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'tpope/vim-eunuch' " move and rename files in buffer
 Plug 'scrooloose/nerdtree'
+Plug 'ycm-core/YouCompleteMe'
 
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
@@ -39,7 +41,6 @@ let g:netrw_banner = 0
 let g:netrw_browse_split = 2
 
 let g:netrw_winsize = 25
-
 
 set termguicolors
 colorscheme onedark
