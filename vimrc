@@ -1,46 +1,38 @@
 set nocompatible
 set number
 syntax on
+filetype plugin indent on
 filetype on
-filetype plugin on
 filetype indent on
+
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
+autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
 
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
 "
-" " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-" Plug 'rafi/awesome-vim-colorschemes'
-" Plug 'francoiscabrol/ranger.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'vim-ruby/vim-ruby'
-Plug 'jacoborus/tender.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'morhetz/gruvbox'
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'joshdick/onedark.vim'
-Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-eunuch' " move and rename files in buffer
+Plug 'scrooloose/nerdtree'
 
-" Tomorrow color scheme for ruby
-Plug 'chriskempson/base16-vim'
-"  Plug 'preservim/nerdtree'
-
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
 Plug 'pangloss/vim-javascript'
 
 call plug#end()
 
 set rtp+=~/.fzf
 
-" autocmd vimenter * NERDTree
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map - :NERDTreeToggle<CR> " open/close nerdtree window
+map <leader>r :NERDTreeFind<cr> " this is the key to jump to the nerdtree window from any other window
+autocmd BufWinEnter * NERDTreeFind
+map ] :NERDTreeFind<CR> " pressing this inside any open file in vim will jump to the nerdtree and highlight where that file is -> very useful when you have multiple files open at once
 
-" map — :NERDTreeToggle<CR> " open/close nerdtree window
-" map <leader>r :NERDTreeFind<cr> “ this is the key to jump to the nerdtree window from any other window
-" autocmd BufWinEnter * NERDTreeFind
-" map ] :NERDTreeFind<CR> “ pressing this inside any open file in vim will jump to the nerdtree and highlight where that file is -> very useful when you have multiple files open at once
-"
 
+nnoremap <silent> <C-t> :FZF<CR>
 " Disable netrw directory banner
 let g:netrw_banner = 0
 " Open files in vertical split
