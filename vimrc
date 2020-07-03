@@ -5,9 +5,10 @@ filetype plugin indent on
 filetype on
 filetype indent on
 
-autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2
-autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
-autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 
 call plug#begin('~/.vim/plugged')
 
