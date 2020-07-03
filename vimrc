@@ -1,5 +1,6 @@
 set nocompatible
 set number
+set mouse=ar
 syntax on
 filetype plugin indent on
 filetype on
@@ -31,7 +32,7 @@ set rtp+=~/.fzf
 
 map - :NERDTreeToggle<CR> " open/close nerdtree window
 map <leader>r :NERDTreeFind<cr> " this is the key to jump to the nerdtree window from any other window
-autocmd BufWinEnter * NERDTreeFind
+" autocmd BufWinEnter * NERDTreeFind
 map ] :NERDTreeFind<CR> " pressing this inside any open file in vim will jump to the nerdtree and highlight where that file is -> very useful when you have multiple files open at once
 
 
