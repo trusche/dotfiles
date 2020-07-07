@@ -11,6 +11,8 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 
+set vb " visual bell instead of bleeping beeping
+
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
@@ -58,3 +60,5 @@ set termguicolors
 colorscheme onedark
 " set lighline theme inside lightline config
 let g:lightline = { 'colorscheme': 'onedark' }
+
+set wildignore+=node_modules/**,vendor/**,coverage/**,log/**,assets/**
