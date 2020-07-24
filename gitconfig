@@ -3,7 +3,7 @@
 	email = thilorusche@gmail.com
 [core]
 	editor = vim
-	excludesfile = /Users/trusche/.gitignore
+	excludesfile = /home/trusche/.gitignore
 [color]
 	ui = true
 [push]
