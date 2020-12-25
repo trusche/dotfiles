@@ -22,7 +22,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'tpope/vim-eunuch' " move and rename files in buffer
 Plug 'scrooloose/nerdtree'
-Plug 'ycm-core/YouCompleteMe'
+" Plug 'ycm-core/YouCompleteMe'
 
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
@@ -35,7 +35,8 @@ let g:ale_fixers = {
   \   'javascript': ['prettier'],
   \   'ruby': ['rubocop'],
   \   'scss': ['prettier'],
-  \   'css': ['prettier']
+  \   'css': ['prettier'],
+  \   'haml': ['remove_trailing_lines', 'trim_whitespace']
   \}
 let g:ale_fix_on_save = 1
 let g:ale_ruby_rubocop_options = '--safe-auto-correct'
