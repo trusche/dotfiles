@@ -25,6 +25,7 @@ Plug 'scrooloose/nerdtree'
 " Plug 'ycm-core/YouCompleteMe'
 
 Plug 'vim-ruby/vim-ruby'
+Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-rails'
 Plug 'dense-analysis/ale'
 Plug 'pangloss/vim-javascript'
@@ -38,8 +39,16 @@ let g:ale_fixers = {
   \   'css': ['prettier'],
   \   'haml': ['remove_trailing_lines', 'trim_whitespace']
   \}
+let g:ale_linters = {
+  \   'javascript': ['prettier'],
+  \   'ruby': ['rubocop'],
+  \   'scss': ['prettier'],
+  \   'css': ['prettier']
+  \}
+
 let g:ale_fix_on_save = 1
-let g:ale_ruby_rubocop_options = '--safe-auto-correct'
+let g:ale_ruby_rubocop_executable = 'bundle'
+let g:ale_ruby_rubocop_options = '--safe-auto-correct --force-exclusion'
 
 set rtp+=~/.fzf
 
@@ -62,4 +71,4 @@ colorscheme onedark
 " set lighline theme inside lightline config
 let g:lightline = { 'colorscheme': 'onedark' }
 
-set wildignore+=node_modules/**,vendor/**,coverage/**,log/**,assets/**
+set wildignore+=node_modules/**,vendor/**,coverage/**,log/**,assets/**,rubycritic/**
