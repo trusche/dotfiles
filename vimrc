@@ -18,17 +18,19 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 "
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'tpope/vim-eunuch' " move and rename files in buffer
 Plug 'scrooloose/nerdtree'
-" Plug 'ycm-core/YouCompleteMe'
-
+Plug 'ycm-core/YouCompleteMe'
 Plug 'vim-ruby/vim-ruby'
 Plug 'airblade/vim-gitgutter'
+Plug 'zivyangll/git-blame.vim'
 Plug 'tpope/vim-rails'
 Plug 'dense-analysis/ale'
 Plug 'pangloss/vim-javascript'
+Plug 'mileszs/ack.vim'
 
 call plug#end()
 
@@ -57,7 +59,7 @@ map <leader>r :NERDTreeFind<cr> " this is the key to jump to the nerdtree window
 " autocmd BufWinEnter * NERDTreeFind
 map ] :NERDTreeFind<CR> " pressing this inside any open file in vim will jump to the nerdtree and highlight where that file is -> very useful when you have multiple files open at once
 
-
+nnoremap <C-[> <C-t>
 nnoremap <silent> <C-t> :FZF<CR>
 " Disable netrw directory banner
 let g:netrw_banner = 0
@@ -67,8 +69,12 @@ let g:netrw_browse_split = 2
 let g:netrw_winsize = 25
 
 set termguicolors
+set guifont=Fira\ Code:h13
 colorscheme onedark
 " set lighline theme inside lightline config
 let g:lightline = { 'colorscheme': 'onedark' }
 
 set wildignore+=node_modules/**,vendor/**,coverage/**,log/**,assets/**,rubycritic/**
+
+" https://github.com/ggreer/the_silver_searcher
+" let g:ackprg = 'ag --nogroup --nocolor --column'

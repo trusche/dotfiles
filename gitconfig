@@ -18,7 +18,9 @@
 	s = status
 	r = rebase -i
 	rc = rebase --continue
-        sum = log --pretty=format:'%Cred%h %C(blue)<%an> %C(white)%s' --abbrev-commit
+  sum = log --pretty=format:'%Cred%h %C(blue)<%an> %C(white)%s' --abbrev-commit
+  lb = branch --sort=-committerdate
+  cf = diff-tree --no-commit-id --name-only -r
 [github]
 	user = trusche
 [credential]

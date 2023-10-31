@@ -15,3 +15,10 @@ alias dc=docker-compose
 alias dce='docker-compose exec'
 
 alias hr='heroku run'
+alias rba='bundle exec rubocop --parallel -a'
+
+alias rdbm='rails db:migrate'
+alias rdbr='rails db:rollback'
+alias rdbmr='rails db:migrate:redo'
+alias rdbms='rails db:migrate:status'
+alias rdbmd='rails db:migrate:down'
