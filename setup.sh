@@ -1,8 +1,8 @@
 #!/bin/bash
 #
-ln -s ~/dotfiles/bash_profile ~/.bash_profile
-ln -s ~/dotfiles/gitconfig ~/.gitconfig
-ln -s ~/dotfiles/aliasrc ~/.aliasrc
-ln -s ~/dotfiles/gemrc ~/.gemrc
-ln -s ~/dotfiles/irbrc ~/.irbrc
-ln -s ~/dotfiles/vimrc ~/.vimrc
+ln -fs ~/dotfiles/bash_profile ~/.bash_profile
+ln -fs ~/dotfiles/gitconfig ~/.gitconfig
+ln -fs ~/dotfiles/aliasrc ~/.aliasrc
+ln -fs ~/dotfiles/gemrc ~/.gemrc
+ln -fs ~/dotfiles/irbrc ~/.irbrc
+ln -fs ~/dotfiles/vimrc ~/.vimrc
