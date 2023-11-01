@@ -1,14 +1,7 @@
 alias be='bundle exec'
 alias ll='ls -lhFG'
-alias carbon='python /opt/graphite/bin/carbon-cache.py'
-alias graphite-web='python /opt/graphite/bin/run-graphite-devel-server.py /opt/graphite'
-alias statsd='node /opt/statsd/stats.js /opt/statsd/config.js'
 alias fs='foreman start'
-alias vssh='ssh vagrant'
-alias jks='jekyll serve'
 alias brewall='brew update && brew cleanup; brew doctor'
-alias a=atom
-alias fc='foreman start'
 alias killchrome='killall "Google Chrome"'
 
 alias dc=docker-compose

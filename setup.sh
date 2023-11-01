@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-ln -fs ~/dotfiles/bash_profile ~/.bash_profile
+ln -fs ~/dotfiles/zshrc ~/.zshrc
 ln -fs ~/dotfiles/gitconfig ~/.gitconfig
 ln -fs ~/dotfiles/aliasrc ~/.aliasrc
 ln -fs ~/dotfiles/gemrc ~/.gemrc
