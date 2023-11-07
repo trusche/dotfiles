@@ -23,7 +23,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'tpope/vim-eunuch' " move and rename files in buffer
 Plug 'scrooloose/nerdtree'
-Plug 'ycm-core/YouCompleteMe'
 Plug 'vim-ruby/vim-ruby'
 Plug 'airblade/vim-gitgutter'
 Plug 'zivyangll/git-blame.vim'
