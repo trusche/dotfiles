@@ -11,5 +11,6 @@ brew "libpq"
 brew "rbenv"
 
 cask "chromedriver"
+cask "rectangle" # window manager https://github.com/rxhanson/Rectangle
 
 
