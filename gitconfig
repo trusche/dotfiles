@@ -9,19 +9,21 @@
 [push]
   default = current
 [alias]
-  lg = log --graph --pretty=format:'%Cred%h%Creset - %Cgreen(%ci)%Creset %s %C(bold blue)<%an>%Creset %C(yellow)%d%Creset'  --abbrev-commit --date=iso
+  a = add
+  au = add -u
+  b = branch
+  cf = diff-tree --no-commit-id --name-only -r
   co = checkout
   cp = cherry-pick
   cpc = cherry-pick --continue
-  p = pull --rebase
-  b = branch
+  lb = branch --sort=-committerdate
+  lg = log --graph --pretty=format:'%Cred%h%Creset - %Cgreen(%ci)%Creset %s %C(bold blue)<%an>%Creset %C(yellow)%d%Creset'  --abbrev-commit --date=iso
   m = merge --ff-only
-  s = status
+  p = pull --rebase
   r = rebase -i
   rc = rebase --continue
+  s = status
   sum = log --pretty=format:'%Cred%h %C(blue)<%an> %C(white)%s' --abbrev-commit
-  lb = branch --sort=-committerdate
-  cf = diff-tree --no-commit-id --name-only -r
 [github]
   user = trusche
 [credential]
