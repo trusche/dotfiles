@@ -28,3 +28,5 @@
   user = trusche
 [credential]
   helper = osxkeychain
+[init]
+	defaultBranch = main
